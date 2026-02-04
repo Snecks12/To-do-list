@@ -1,0 +1,264 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  width: 100%;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: white;
+  align-items: flex-start;
+}
+.label > label{
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+#toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    margin-left: -220px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: -100px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+  }
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    top: 20px; /* Show at top with some padding */
+    position: fixed; /* Keep it fixed */
+    z-index: 999;
+  }
+.input-container{
+display: flex;
+align-items: flex-start;
+flex-direction: row;
+}
+.to-do-list-title{
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  color: white;
+}
+label{
+  color: white;
+}
+.clock{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}
+input[type = 'text'],
+input[type = 'date'],
+input[type = 'time']{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+}
+.clock-container{
+ width: fit-content;
+ margin-bottom: 10px;
+}
+.clock{
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.task-date,
+.task-time {
+  position: relative;
+  color: #444;
+}
+.add{
+  margin-left: 1.2rem;
+  border: none;
+  padding: 5px;
+  background-color: lightgray;
+  transition: 0.2s ease;
+  width: 5vw;
+  border-radius: 3px;
+  font-size: 15px;
+  position: relative;
+  top:27px;
+}
+.add:hover{
+  background-color: forestgreen;
+  color: white;
+  cursor: pointer;
+}
+.task-content {
+  flex: 1 1 0;
+  min-width: 0;
+  word-break: break-word;
+  white-space: normal;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  /* Add these: */
+  overflow-wrap: break-word;
+  overflow: hidden;
+  font-size: 30px;
+  gap: 10px;
+}
+.list{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  padding: 10px;
+}
+.text{
+  padding: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    backdrop-filter: blur(3px) saturate(180%);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.tasktext{
+  font-size: 17px;
+  color: #fff;
+}
+.editpop{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center; /* Center the modal content horizontally */
+    align-items: center; /* Center the modal content vertically */
+}
+.popInside{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+} 
+/* buttons*/
+.btnContainer{
+  flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+.deleteBtn{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  margin-left: 20px;
+}
+.editBtn{
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  margin-left: 10px;
+}
+.deleteBtn:hover{
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  transform:translateY(-2px);
+
+}
+.editBtn:hover{
+ cursor:pointer;
+ background-color: orange;
+ transform: translateY(-2px);
+}
+.div-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.animate {
+  -webkit-animation: puff-in-center 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation: puff-in-center 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+/* responsive */
+/* Responsive adjustments */
