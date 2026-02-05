@@ -4,7 +4,6 @@
 .container{
   width: 100%;
   overflow-x:hidden;
-  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +94,14 @@ input[type = 'time']{
 .task-time {
   position: relative;
   color: #444;
+  display: block;
+}
+.save-cancel-btn{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 13px;
+  width: 100%;
 }
 .add{
   margin-left: 1.2rem;
@@ -167,17 +174,37 @@ input[type = 'time']{
     align-items: center; /* Center the modal content vertically */
 }
 .popInside{
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
     width: 400px;
     max-width: 90%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
+      backdrop-filter: blur(1px) saturate(3%);
+    -webkit-backdrop-filter: blur(1px) saturate(3%);
+    background-color: rgba(17, 25, 40, 0.79);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.popInside h1{
+  color: #fff;
+}
+.saveBtn, .cancelBtn{
+  padding: 6px;
+  border: none;
+  outline: none;
+  transition: 0.5s ease;
+  border-radius: 8px;
+}
+.saveBtn:hover{
+  cursor: pointer;
+  background-color: lightgreen;
+}
+.cancelBtn:hover{
+  cursor: pointer;
+  background-color: red;
 } 
 /* buttons*/
 .btnContainer{

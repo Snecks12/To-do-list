@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>To-do-list</title>
 <link rel="stylesheet" href = "style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="reponsive.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Anton&family=Bebas+Neue&family=Bytesized&family=DM+Serif+Text:ital@0;1&family=Intel+One+Mono:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Oswald:wght@200..700&family=Protest+Strike&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
     canvas {
@@ -59,9 +59,11 @@
             <h1>Edit</h1>
             <input id = "inputPop" class = "inputPop" type = "text" placeholder="Enter a task. . . "></input>
             <input id = "popDate" type = "date"/>
-            <input id = "popTime" type = "time"/> 
-                   <button id = "save" class = "saveBtn">Save</button>
+            <input id = "popTime" type = "time"/>
+        <div class = "save-cancel-btn"> 
+        <button id = "save" class = "saveBtn">Save</button>
         <button id = "cancel" class = "cancelBtn">Cancel</button>
+        </div>
   </div>
 <script src = "source.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
